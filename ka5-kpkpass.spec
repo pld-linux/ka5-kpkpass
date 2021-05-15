@@ -1,15 +1,15 @@
-%define		kdeappsver	21.04.0
+%define		kdeappsver	21.04.1
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kpkpass
 Summary:	kpkpass
 Name:		ka5-%{kaname}
-Version:	21.04.0
+Version:	21.04.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	f2b08756439cee4cc91af1e9b76f33e9
+# Source0-md5:	8b009fcb4299452ec90f3104bebb5b8d
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel
