@@ -30,6 +30,11 @@ Library to deal with Apple Wallet pass files. Apple Wallet files are
 essentially ZIP files containing a JSON description of the pass,
 translated message catalogs and graphical assets to render the pass.
 
+%description -l pl.UTF-8
+Biblioteka do obsługi portfela Apple z plikami haseł. Pliki Apple
+Wallet są plikami ZIP z JSONowym opisem pass, a także katalogiem z
+tłumaczeniami i plikami graficznymi.
+
 %package devel
 Summary:	Header files for %{kaname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kaname}
