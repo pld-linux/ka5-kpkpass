@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.12.3
+%define		kdeappsver	23.04.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kpkpass
 Summary:	kpkpass
 Name:		ka5-%{kaname}
-Version:	22.12.3
-Release:	2
+Version:	23.04.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	ad13789d0bbe522dc1ca81307f02a3ee
+# Source0-md5:	950ad7d591503fc9148e8a02e831e448
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel
@@ -81,12 +81,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%ghost %{_libdir}/libKPimPkPass.so.5
-%attr(755,root,root) %{_libdir}/libKPimPkPass.so.*.*.*
 %{_datadir}/qlogging-categories5/org_kde_kpkpass.categories
+%ghost %{_libdir}/libKPim5PkPass.so.5
+%attr(755,root,root) %{_libdir}/libKPim5PkPass.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/KPim/KPkPass
+%{_includedir}/KPim5/KPkPass
+%{_libdir}/cmake/KPim5PkPass
 %{_libdir}/cmake/KPimPkPass
-%{_libdir}/libKPimPkPass.so
+%{_libdir}/libKPim5PkPass.so
