@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	23.08.3
+%define		kdeappsver	23.08.4
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kpkpass
 Summary:	kpkpass
 Name:		ka5-%{kaname}
-Version:	23.08.3
+Version:	23.08.4
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	2ff9ce69dc08f633ac9362983c6af208
+# Source0-md5:	fc5db00bfe7e994787f4f1faa123813b
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel
