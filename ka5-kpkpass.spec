@@ -1,27 +1,27 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	23.08.4
+%define		kdeappsver	24.01.95
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kpkpass
 Summary:	kpkpass
 Name:		ka5-%{kaname}
-Version:	23.08.4
-Release:	1
+Version:	24.01.95
+Release:	0.1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
-Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	fc5db00bfe7e994787f4f1faa123813b
+Source0:	https://download.kde.org/unstable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	c49740359677082c48140f703633d513
 URL:		http://www.kde.org/
-BuildRequires:	Qt5Core-devel >= %{qtver}
-BuildRequires:	Qt5Gui-devel
-BuildRequires:	Qt5Test-devel
+BuildRequires:	Qt6Core-devel >= %{qtver}
+BuildRequires:	Qt6Gui-devel
+BuildRequires:	Qt6Test-devel
 BuildRequires:	cmake >= 3.20
-BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
-BuildRequires:	kf5-karchive-devel >= %{kframever}
+BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf6-karchive-devel >= %{kframever}
 BuildRequires:	ninja
-BuildRequires:	qt5-build >= %{qtver}
+BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
@@ -79,13 +79,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_datadir}/qlogging-categories5/org_kde_kpkpass.categories
-%ghost %{_libdir}/libKPim5PkPass.so.5
-%attr(755,root,root) %{_libdir}/libKPim5PkPass.so.*.*.*
+%attr(755,root,root) %{_libdir}/libKPim6PkPass.so.*.*
+%ghost %{_libdir}/libKPim6PkPass.so.6
+%{_datadir}/qlogging-categories6/org_kde_kpkpass.categories
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/KPim5/KPkPass
-%{_libdir}/cmake/KPim5PkPass
-%{_libdir}/cmake/KPimPkPass
-%{_libdir}/libKPim5PkPass.so
+%{_includedir}/KPim6/KPkPass
+%{_libdir}/cmake/KPim6PkPass
+%{_libdir}/libKPim6PkPass.so
